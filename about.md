@@ -4,12 +4,17 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hey there! I'm Marco, a 24-year-old cybersecurity enthusiast from Portugal. My journey in tech began as a systems administrator, where I worked across Linux and Windows environments, eventually reaching the senior level. From there, my curiosity and drive led me to dive deep into the world of pentesting, which is where I now focus my career.
 
-### More Information
+I'm particularly passionate about web application security and infrastructure. Nothing quite matches the thrill of uncovering vulnerabilities and improving security for organizations.
 
-A place to include any other types of information that you'd like to include about yourself.
+Outside of work, I enjoy staying active at the gym, spending time with friends and family, and continuously learning about the latest techniques in pentesting. This blog is where I share my knowledge and experiences in pentesting and bug bounty hunting, and I hope you find something here to inspire and inform your own journey.
+
+### My certifications
+
+- **BSCP** - Burp Suite Certified Practitioner *(November 12, 2024)*
+- **CRTP** - Certified Red Team Professional *(August 17, 2024)*
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[email@domain.com](mailto:marcoliveirak15@gmail.com)
