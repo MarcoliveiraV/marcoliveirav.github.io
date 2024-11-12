@@ -8,7 +8,8 @@ Hey there! I'm Marco, a 24-year-old cybersecurity enthusiast from Portugal. My j
 
 I'm particularly passionate about web application security and infrastructure. Nothing quite matches the thrill of uncovering vulnerabilities and improving security for organizations.
 
-Outside of work, I enjoy staying active at the gym, spending time with friends and family, and continuously learning about the latest techniques in pentesting. This blog is where I share my knowledge and experiences in pentesting and bug bounty hunting, and I hope you find something here to inspire and inform your own journey.
+Outside of work, I enjoy staying active at the gym, spending time with friends and family, and continuously learning about the latest techniques in pentesting. 
+This blog is where I share my knowledge and experiences in pentesting, write-ups of CTF's, cert reviews, and bug bounty hunting (soon), and I hope you find something here to inspire and inform your own journey.
 
 ### My certifications
 
