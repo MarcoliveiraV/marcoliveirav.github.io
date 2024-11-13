@@ -42,7 +42,7 @@ So from beggining to finish it took me around 110 minutes for the whole exam.
 
 There was only a step in foothold again that took me longer because I was making wrong assumptions. Oops!
 
-[<img src="{{ site.baseurl }}/images/BSCP.png" style="width: 400px;"/>]({{ site.baseurl }}/)
+![BSCP](/images/BSCP.png "BSCP")
 
 
 ### Tips
