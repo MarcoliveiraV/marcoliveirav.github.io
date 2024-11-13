@@ -43,7 +43,8 @@ So from beggining to finish it took me around 110 minutes for the whole exam.
 
 There was only a step in foothold again that took me longer because I was making wrong assumptions. Oops!
 
-![BSCP](../images/BSCP.png "BSCP" =x500)
+<img src="../images/BSCP.png">
+
 
 
 ### Tips
