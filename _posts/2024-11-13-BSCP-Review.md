@@ -35,8 +35,10 @@ So it ended like that, I got stuck at 4/6.
 
 #### Second attempt
 After a night's sleep, rest and contemplation, I built enough courage to try it again, I was more confident I could pass now that I've failed, but at the same time it was becoming costly.
+
 This time, I blazed through it. The first app got it done in 1 hour and the second one just under an hour as well.
 So from beggining to finish it took me around 110 minutes for the whole exam.
+
 There was only a step in foothold again that took me longer because I was making wrong assumptions. Oops!
 
 
