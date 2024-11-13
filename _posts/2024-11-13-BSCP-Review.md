@@ -17,7 +17,7 @@ I really did not have any format of studying per say, for example organizing stu
 I just went down the list of topics and did exercises from Apprentice to Practicioner and then moved topic.
 Took notes along the way, which came very handy during the exam! (Some payloads were **almost** copy and paste!)
 By the end of it, this was my preparation:
-[<img src="{{ site.baseurl }}/images/BSCP_Progress.png" style="width: 400px;"/>]({{ site.baseurl }}/)
+![Progress](/images/BSCP_Progress.png "Academy Progress")
 
 ### Exam Experience
 #### First attempt
