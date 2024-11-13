@@ -17,7 +17,8 @@ I really did not have any format of studying per say, for example organizing stu
 I just went down the list of topics and did exercises from Apprentice to Practicioner and then moved topic.
 Took notes along the way, which came very handy during the exam! (Some payloads were **almost** copy and paste!)
 By the end of it, this was my preparation:
-![Progress](/images/BSCP_Progress.png "Academy Progress")
+
+![Progress](/images/BSCP_Progress.png "Academy Progress" =x500)
 
 ### Exam Experience
 #### First attempt
@@ -42,7 +43,7 @@ So from beggining to finish it took me around 110 minutes for the whole exam.
 
 There was only a step in foothold again that took me longer because I was making wrong assumptions. Oops!
 
-![BSCP](/images/BSCP.png "BSCP")
+![BSCP](/images/BSCP.png "BSCP" =x500)
 
 
 ### Tips
