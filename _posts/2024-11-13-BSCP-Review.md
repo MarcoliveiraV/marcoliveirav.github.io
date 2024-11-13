@@ -18,7 +18,7 @@ I just went down the list of topics and did exercises from Apprentice to Practic
 Took notes along the way, which came very handy during the exam! (Some payloads were **almost** copy and paste!)
 By the end of it, this was my preparation:
 
-![Progress](../images/BSCP_Progress.png "Academy Progress" =x500)
+<img src="../images/BSCP_progress.png">
 
 ### Exam Experience
 #### First attempt
