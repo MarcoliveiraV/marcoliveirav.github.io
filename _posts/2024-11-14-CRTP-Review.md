@@ -9,6 +9,7 @@ I'm writting this about 4 months after, a little late but better late than never
 ### So what is CRTP?
 Certified Red Team Professional, is a certification focused on Active Directory and red teaming techniques, quoting Altered Security: 
 >"It is one of the most popular beginner Red Team certification"
+
 It covers topics such as:
 - Domain Enumeration
 - Privilege Escalation
