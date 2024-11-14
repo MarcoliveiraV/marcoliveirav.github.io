@@ -19,7 +19,7 @@ It costs around 249$ (236€), in my case, I got a discount which got the total 
 This price is for the on-demand course, will explain later what it involves, but you also have the more premium option of 299$ (284€) with this you have access to live classes with Nikhil Mattal.  
 Cost for the CRTP course:
 
-<img src="../images/CRTP_Packages.png">
+<img src="../images/CRTP_Packages.png" width="100%">
 
 ### Preparation
 As I said previously I purchased the 236€ on-demand course. This means you have 90 days access to the course materials from the moment you have access to their platform and then 30 days lab access after starting it.
@@ -53,4 +53,4 @@ Tips:
 - Question everything that you don't understand
 - Join their discord
 
-<img src="../images/CertifiedRedTeamProfessional.png">
+<img src="../images/CertifiedRedTeamProfessional.png" width="100%">
