@@ -21,6 +21,42 @@ After interacting with them, we see that some we can turn on/off and others we c
 </div>
 The other thing we see, is a master-switch button that requires a 3 digit pin, interesting.
 <div class="image-row">
-  <img src="../images/iot_options.jpg" alt="Login screen" style="width: 50%;">
-  <img src="../images/iot_switch.jpg" alt="TV devices screen" style="width: 50%;">
+  <img src="../images/iot_options.jpg">
+  <img src="../images/iot_switch.jpg">
 </div>
+
+### Static Analysis
+First things first, let's take a look at the android manifest.
+Using JADX, open the application's APK, go to resources and AndroidManifest.xml
+Straight away, we see a receiver named `com.mobilehackinglab.iotconnect.MasterReceiver` with an action of "MASTER_ON".
+<img src="../images/iot_manifest.png" width="100%">
+It caught my interest because it explicitly tells us that it is exported and its name is similar to that "Master switch" we saw earlier.
+Lets have a look where and how it is implemented.
+
+We see its usage in `com.mobilehackinglab.iotconnect.CommunicationManager`:
+<img src="../images/iot_searchMasterReceiver.png" width="100%">
+
+Looking inside Communication Manager's class, this is the bit that interests us:
+<img src="../images/iot_turnonalldevices.png" width="100%">
+
+Here we see the action defined `MASTER_ON` and it is waiting for a `key` value.
+It then checks this key and turns on all devices, so we see that we might have a broken access here.
+The `check_key` function, calls the decrypt function and compares the result to **"master_on"** and returns **true** or **false** based on the result.
+<img src="../images/iot_keycheck.png" width="100%">
+
+Before proceeding with the brute-force lets set up frida on the function `turnOnAllDevices` since we know this is the function called if we succeed
+```
+$ frida-trace -U "IOT Connect" -j '*!*turnOnAllDevices'
+```
+
+With this in mind, let's try brute-forcing our PIN, it's a simple 3 digit PIN, so a bash onelineris enough to crack it:
+```
+$ for i in {000..999}; do adb shell am broadcast -a MASTER_ON --ei key $i; echo $i; done
+```
+We are sending a broadcast signal, with the action "MASTER_ON", iterating the value key from 0 to 999.
+
+After a while we see this output on frida-trace:
+<img src="../images/iot_fridatrace.png" width="100%">
+
+And if we check the contents of the TV which was previously turn off, we see that it is now turned on:
+<img src="../images/iot_tvon.png" width="50%">
