@@ -54,8 +54,8 @@ The `check_key` function, calls the decrypt function and compares the result to 
 <br>
 
 ### Exploiting
-We can clearly brute-force this key value, so let's begin.
-Before proceeding with the brute-force lets set up frida-trace on the function `turnOnAllDevices` since we know this is the function called if we succeed with the bruteforce.
+We see that we can clearly brute-force this key value, so let's begin.
+Before proceeding with the brute-force lets set up frida-trace on the function `turnOnAllDevices` since we know this function is called if we succeed with the bruteforce.
 
 ```
 $ frida-trace -U "IOT Connect" -j '*!*turnOnAllDevices'
@@ -70,6 +70,8 @@ We are sending a broadcast intent, with the action "MASTER_ON", iterating the pa
 
 After a while we see this output on frida-trace:
 <img src="../images/iot_fridatrace.png" width="100%">
+So we can assume we were able to brute-force the pin, since the function was called.
+
 <br>
 And if we check the contents of the TV which was previously turn off, we see that it is now turned on:
 <br>
@@ -90,6 +92,6 @@ To completely solve this issue we can define `exported` as `false`
 ```
 
 ### Conclusion
-This labs, using a simple exercise, explains how an application can become vulnerable by incorrectly configuring a broadcast receiver. 
-With this broken access, a user does not need to be authenticated to perform privilege actions, in this case it was as simple as turning on devices, but it could be much much worse!
+This lab, using a simple exercise, shows how an application can become vulnerable by incorrectly configuring a broadcast receiver. 
+With this broken access, an unauthenticated use can perform privileged actions, in this case it was as simple as turning on devices, but it could be much much worse!
 
