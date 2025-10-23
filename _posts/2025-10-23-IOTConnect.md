@@ -91,4 +91,5 @@ To completely solve this issue we can define `exported` as ` false`
 
 ### Conclusion
 This labs, using a simple exercise, explains how an application can become vulnerable by incorrectly configuring a broadcast receiver. 
-With this broken access, a user does not need to be authenticated to perform privilege actions, in this case it was as simple as turning on devices, but it could be much much worse! :D
+With this broken access, a user does not need to be authenticated to perform privilege actions, in this case it was as simple as turning on devices, but it could be much much worse!
+
