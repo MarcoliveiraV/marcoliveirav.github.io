@@ -23,18 +23,18 @@ body {
   color: $darkGray;
 }
 
-.column {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-} 
+  img {
+    width: 48%;
+    height: auto;
+  }
+}
 
 .container {
   margin: 0 auto;
