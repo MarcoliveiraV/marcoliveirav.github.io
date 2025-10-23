@@ -43,8 +43,10 @@ Looking inside Communication Manager's class, this is the bit that interests us:
 <br>
 <img src="../images/iot_turnonalldevices.png" width="100%">
 <br>
+
 Here we see the action defined `MASTER_ON` and it is waiting for a `key` value.
 It then checks this key and turns on all devices, so we see that we might have a broken access here.
+<br>
 The `check_key` function, calls the decrypt function and compares the result to **"master_on"** and returns **true** or **false** based on the result.
 <br>
 <img src="../images/iot_keycheck.png" width="100%">
