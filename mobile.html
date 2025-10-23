@@ -8,7 +8,7 @@ permalink: /mobile/
 <ul>
   {% for post in site.categories.mobile %}
     <article class="post">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <h2>{{ post.title }}</h2>
 
       <div class="entry">
         {{ post.excerpt | strip_html | truncatewords: 40 }}
