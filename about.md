@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hey there! I'm Marco, a 25-year-old cybersecurity enthusiast from Portugal. My journey in tech began as a systems administrator, where I worked across Linux and Windows environments, eventually reaching the senior level. From there, my curiosity and drive led me to dive deep into the world of pentesting, which is where I now focus my career.
+Hey there! I'm Marco, a 25-year-old cybersecurity enthusiast from Portugal. My journey in tech began as a systems administrator, where I worked across Linux and Windows environments. From there, my curiosity and drive led me to dive deep into the world of pentesting, which is where I now focus my career.
 
 I'm particularly passionate about web application security and infrastructure. Nothing quite matches the thrill of uncovering vulnerabilities and improving security for organizations.
 
