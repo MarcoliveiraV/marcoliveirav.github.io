@@ -1,0 +1,19 @@
+---
+layout: default
+title: Blog Page
+permalink: /blog/
+---
+
+<h1>{{ page.title }}</h1>
+<ul>
+  {% for post in site %}
+    <article class="post">
+      <h2>{{ post.title }}</h2>
+
+      <div class="entry">
+        {{ post.excerpt | strip_html | truncatewords: 40 }}
+      </div>
+
+      <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
+  {% endfor %}
+</ul>
