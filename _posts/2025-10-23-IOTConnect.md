@@ -53,7 +53,7 @@ With this in mind, let's try brute-forcing our PIN, it's a simple 3 digit PIN, s
 ```
 $ for i in {000..999}; do adb shell am broadcast -a MASTER_ON --ei key $i; echo $i; done
 ```
-We are sending a broadcast signal, with the action "MASTER_ON", iterating the value key from 0 to 999.
+We are sending a broadcast intent, with the action "MASTER_ON", iterating the parameter key from 0 to 999.
 
 After a while we see this output on frida-trace:
 <img src="../images/iot_fridatrace.png" width="100%">
