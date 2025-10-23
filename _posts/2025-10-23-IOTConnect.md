@@ -38,7 +38,7 @@ Lets have a look where and how it is implemented.
 <br><br>
 We see its usage in `CommunicationManager`:
 <img src="../images/iot_searchMasterReceiver.png" width="100%">
-<br>
+<br><br><br>
 Looking inside Communication Manager's class, this is the bit that interests us:
 <img src="../images/iot_turnonalldevices.png" width="100%">
 <br>
