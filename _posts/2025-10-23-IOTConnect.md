@@ -57,12 +57,12 @@ The `check_key` function, calls the decrypt function and compares the result to 
 We see that we can clearly brute-force this key value, so let's begin.
 Before proceeding with the brute-force lets set up frida-trace on the function `turnOnAllDevices` since we know this function is called if we succeed with the bruteforce.
 
-```
+```bash
 $ frida-trace -U "IOT Connect" -j '*!*turnOnAllDevices'
 ```
 
 With this in mind, let's try brute-forcing our PIN, it's a simple 3 digit PIN, so a bash oneliner is enough to crack it:
-```
+```bash
 $ for i in {000..999}; do adb shell am broadcast -a MASTER_ON --ei key $i; echo $i; done
 ```
 We are sending a broadcast intent, with the action "MASTER_ON", iterating the parameter key from 0 to 999.
