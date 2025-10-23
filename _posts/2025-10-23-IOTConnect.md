@@ -29,6 +29,7 @@ The other thing we see, is a master-switch button that requires a 3 digit pin, i
 
 First things first, let's take a look at the android manifest.
 Using JADX, open the application's APK, go to resources and AndroidManifest.xml
+<br>
 Straight away, we see a receiver named `MasterReceiver` with an intent filter waiting for broadcast `"MASTER_ON"`.
 
 <img src="../images/iot_manifest.png" width="100%">
