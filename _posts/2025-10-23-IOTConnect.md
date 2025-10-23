@@ -32,27 +32,22 @@ Using JADX, open the application's APK, go to resources and AndroidManifest.xml
 Straight away, we see a receiver named `MasterReceiver` with an intent filter waiting for broadcast `"MASTER_ON"`.
 
 <img src="../images/iot_manifest.png" width="100%">
-
-
+<br><br>
 It caught my interest because it explicitly tells us that it is exported and its name is similar to that "Master switch" we saw earlier.
 Lets have a look where and how it is implemented.
-
+<br><br>
 We see its usage in `CommunicationManager`:
 <img src="../images/iot_searchMasterReceiver.png" width="100%">
-
-
-
+<br>
 Looking inside Communication Manager's class, this is the bit that interests us:
-
 <img src="../images/iot_turnonalldevices.png" width="100%">
-
+<br>
 Here we see the action defined `MASTER_ON` and it is waiting for a `key` value.
 It then checks this key and turns on all devices, so we see that we might have a broken access here.
 The `check_key` function, calls the decrypt function and compares the result to **"master_on"** and returns **true** or **false** based on the result.
-
+<br>
 <img src="../images/iot_keycheck.png" width="100%">
-
-
+<br><br>
 Before proceeding with the brute-force lets set up frida-trace on the function `turnOnAllDevices` since we know this is the function called if we succeed with the bruteforce.
 
 ```
@@ -68,6 +63,7 @@ We are sending a broadcast intent, with the action "MASTER_ON", iterating the pa
 
 After a while we see this output on frida-trace:
 <img src="../images/iot_fridatrace.png" width="100%">
-
+<br>
 And if we check the contents of the TV which was previously turn off, we see that it is now turned on:
+<br>
 <img src="../images/iot_tvon.jpg" width="50%">
