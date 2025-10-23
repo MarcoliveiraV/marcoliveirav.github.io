@@ -77,7 +77,7 @@ And if we check the contents of the TV which was previously turn off, we see tha
 
 ### Remediation
 
-To completely solve this issue we can define `exported` as `false`
+To completely solve this issue we can define `exported` as ` false`
 ```
         <receiver
             android:name="com.mobilehackinglab.iotconnect.MasterReceiver"
