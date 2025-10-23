@@ -38,8 +38,9 @@ Lets have a look where and how it is implemented.
 <br><br>
 We see its usage in `CommunicationManager`:
 <img src="../images/iot_searchMasterReceiver.png" width="100%">
-<br><br><br>
+<br><br>
 Looking inside Communication Manager's class, this is the bit that interests us:
+<br>
 <img src="../images/iot_turnonalldevices.png" width="100%">
 <br>
 Here we see the action defined `MASTER_ON` and it is waiting for a `key` value.
@@ -47,7 +48,10 @@ It then checks this key and turns on all devices, so we see that we might have a
 The `check_key` function, calls the decrypt function and compares the result to **"master_on"** and returns **true** or **false** based on the result.
 <br>
 <img src="../images/iot_keycheck.png" width="100%">
-<br><br>
+<br>
+
+### Exploiting
+We can clearly brute-force this key value, so let's begin.
 Before proceeding with the brute-force lets set up frida-trace on the function `turnOnAllDevices` since we know this is the function called if we succeed with the bruteforce.
 
 ```
@@ -67,3 +71,21 @@ After a while we see this output on frida-trace:
 And if we check the contents of the TV which was previously turn off, we see that it is now turned on:
 <br>
 <img src="../images/iot_tvon.jpg" width="50%">
+
+### Remediation
+
+To completely solve this issue we can define `exported` as `false`L
+```
+        <receiver
+            android:name="com.mobilehackinglab.iotconnect.MasterReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="MASTER_ON"/>
+            </intent-filter>
+        </receiver>
+```
+
+### Conclusion
+This labs, using a simple exercise, explains how an application can become vulnerable by incorrectly configuring a broadcast receiver. 
+With this broken access, a user does not need to be authenticated to perform privilege actions, in this case it was as simple as turning on devices, but it could be much much worse! :D
