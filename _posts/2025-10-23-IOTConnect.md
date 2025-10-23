@@ -15,10 +15,14 @@ Improperly implemented broadcast receivers can allow an attacker to send a malic
 When we open the application we can see a few things.
 First we see a login/sign-up, and after sign-in and respective login, we see a few devices, like speakers, TV, Fan, and a button to turn them on and off.
 After interacting with them, we see that some we can turn on/off and others we can't, the application tells us its because we are a **guest user**.
-<div class="image-row">
-  <img src="../images/io_login.jpg" alt="Login screen" style="width: 50%;">
-  <img src="../images/iot_tv.jpg" alt="TV devices screen" style="width: 50%;">
-</div>
+ <div class="row">
+  <div class="column">
+    <img src="../images/io_login.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../images/iot_tv.jpg" alt="Forest" style="width:100%">
+  </div>
+</div> 
 The other thing we see, is a master-switch button that requires a 3 digit pin, interesting.
 <div class="image-row">
   <img src="../images/iot_options.jpg" alt="Login screen" style="width: 50%;">
