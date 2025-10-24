@@ -18,5 +18,5 @@ This blog is where I share my knowledge and experiences in pentesting, write-ups
 
 ### Contact me
 
-[marcoliveirak15@gmail.com](mailto:marcoliveirak15@gmail.com)
-[LinkedIn](www.linkedin.com/in/marcoliveira15)
+[marco.oliveira@owasp.org](mailto:marcoliveirak15@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/marcoliveira15)

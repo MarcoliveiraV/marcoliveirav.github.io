@@ -9,7 +9,7 @@ name: Marco Oliveira
 description: Penetration Tester
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/MarcoliveiraV/marcoliveirav.github.io/refs/heads/master/logo
+avatar: https://raw.githubusercontent.com/MarcoliveiraV/marcoliveirav.github.io/refs/heads/master/images/logo.png
 
 #
 # Flags below are optional
@@ -31,6 +31,9 @@ footer-links:
   youtube: 
   googleplus:
 
+remote_theme: pages-themes/hacker@v0.2.0
+plugins:
+- jekyll-remote-theme
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
