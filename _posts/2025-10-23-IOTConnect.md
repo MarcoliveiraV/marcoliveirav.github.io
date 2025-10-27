@@ -7,11 +7,11 @@ excerpt: "Exploiting Broadcast Receivers in IOTConnect from MobileHackingLab"
 
 The IOT Connect lab is meant to help you understand how vulnerable **Broadcast receivers** can affect an application's security.
 
-### So what is a Broadcast Receiver?
+## So what is a Broadcast Receiver?
 It's a component, that allows an appplication to listen for and respond to system-wide broadcast messages / events.
 Improperly implemented broadcast receivers can allow an attacker to send a malicious intent to make vulnerable applications perform actions not intended for external callers.
 
-### First look at the application
+## First look at the application
 When we open the application we can see a few things.
 First we see a login/sign-up, and after sign-in and respective login, we see a few devices, like speakers, TV, Fan, and a button to turn them on and off.
 After interacting with them, we see that some we can turn on/off and others we can't, the application tells us its because we are a **guest user**.
@@ -25,7 +25,7 @@ The other thing we see, is a master-switch button that requires a 3 digit pin, i
   <img src="../images/iot_switch.jpg">
 </div>
 
-### Static Analysis
+## Static Analysis
 
 First things first, let's take a look at the android manifest.
 Using JADX, open the application's APK, go to resources and AndroidManifest.xml
@@ -53,7 +53,7 @@ The `check_key` function, calls the decrypt function and compares the result to 
 <img src="../images/iot_keycheck.png" width="100%">
 <br>
 
-### Exploiting
+## Exploiting
 We see that we can clearly brute-force this key value, so let's begin.
 Before proceeding with the brute-force lets set up frida-trace on the function `turnOnAllDevices` since we know this function is called if we succeed with the bruteforce.
 
@@ -77,7 +77,7 @@ And if we check the contents of the TV which was previously turn off, we see tha
 <br>
 <img src="../images/iot_tvon.jpg" width="50%">
 
-### Remediation
+## Remediation
 
 To completely solve this issue we can define `exported` as `false`
 ```
@@ -91,7 +91,7 @@ To completely solve this issue we can define `exported` as `false`
         </receiver>
 ```
 
-### Conclusion
+## Conclusion
 This lab, using a simple exercise, shows how an application can become vulnerable by incorrectly configuring a broadcast receiver. 
 With this broken access, an unauthenticated use can perform privileged actions, in this case it was as simple as turning on devices, but it could be much much worse!
 
