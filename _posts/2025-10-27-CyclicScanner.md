@@ -2,7 +2,7 @@
 title: "CyclicScanner Lab Walkthrough - Mobile Hacking Lab"
 date: 2025-10-27
 categories: [mobile]
-excerpt: "Explointing vulnerable android service"
+excerpt: "Exploiting vulnerable android service"
 ---
 
 ## Introduction
@@ -60,7 +60,7 @@ Time to understand what the **ScanService** is doing.
 </div>
 <br>
 
-Going by highlights, the first part prints a string to announce that the file scan is starting, then gets the value of **ExternalStorageFirectory** from the environmental variables.
+Going by highlights, the first part prints a string to announce that the file scan is starting, then gets the value of **ExternalStorageDirectory** from the environmental variables.
 We then iterate each file in the directory and feed it to the function "scanFile", which seems to be the actual Scan caller. Let's have a look.
 
 ### ScanFile()
